@@ -1,0 +1,81 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              08/05/2022 01:19:34 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\KEILC51u5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ma
+                    -in.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REG51.H>
+   2          #include <intrins.H>
+   3          void delay(unsigned int x){while(x--);}
+   4          void display()  
+   5          { 
+   6   1        unsigned char i_0,i_1,i_2,i_3;
+   7   1      /***依次流水***/
+   8   1        for(i_0 = 0;i_0 < 7;i_0++)
+   9   1        {
+  10   2          if(i_0 == 0)
+  11   2          {
+  12   3            P1 = ~0x01;delay(40000);
+  13   3          }
+  14   2          P1 = _crol_(P1,1);delay(40000);
+  15   2        }
+  16   1        P1 = 0xff;
+  17   1        for(i_1 = 0;i_1 < 7;i_1++)
+  18   1        {
+  19   2          if(i_1 == 0)  
+  20   2          {
+  21   3            P2 = ~0x01;delay(40000);
+  22   3          }
+  23   2          P2 = _crol_(P2,1);delay(40000);
+  24   2        }
+  25   1        P2 = 0xff;
+  26   1        delay(40000);
+  27   1      /***依次点亮***/
+  28   1        for(i_2 = 0;i_2 < 7;i_2++)
+  29   1        {
+  30   2          if(i_2 == 0)
+  31   2          {
+  32   3          P1 = ~0x01;
+  33   3          }delay(30000);
+  34   2          P1 = _crol_(P1,1) - 0x01;
+  35   2        }
+  36   1        delay(30000); 
+  37   1        for(i_3 = 0;i_3 < 7;i_3++)
+  38   1        {
+  39   2          if(i_3 == 0)
+  40   2          {
+  41   3            P2 = ~0x01;
+  42   3          }delay(30000);
+  43   2          P2 = _crol_(P2,1) - 0x01;
+  44   2        }
+  45   1        delay(20000);
+  46   1        P1 = 0Xff;P2 = 0Xff;
+  47   1        delay(20000);
+  48   1      }
+  49          void main()
+  50          {
+  51   1        while(1)
+  52   1        {
+  53   2          display();
+  54   2        }
+C51 COMPILER V9.60.0.0   MAIN                                                              08/05/2022 01:19:34 PAGE 2   
+
+  55   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    228    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
