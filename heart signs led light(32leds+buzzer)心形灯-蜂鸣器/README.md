@@ -1,0 +1,2 @@
+![32led](https://github.com/LZH-ang/heart-signs-led-light-with-8051mcu/blob/main/heart%20signs%20led%20light(32leds%2Bbuzzer)%E5%BF%83%E5%BD%A2%E7%81%AF-%E8%9C%82%E9%B8%A3%E5%99%A8/pcb3d%2032leds.png)
+![30led](https://github.com/LZH-ang/heart-signs-led-light-with-8051mcu/blob/main/heart%20signs%20led%20light(32leds%2Bbuzzer)%E5%BF%83%E5%BD%A2%E7%81%AF-%E8%9C%82%E9%B8%A3%E5%99%A8/pcb%2030leds.png)
